@@ -26,6 +26,6 @@ See the [upstream project](https://github.com/jeffshee/hidamari#features-) for t
 ## Installation ⏬
 
 ### Debian/Ubuntu (.deb) — this repo
-[![GitHub release](https://img.shields.io/github/v/release/uzairdeveloper223/hidamari?style=for-the-badge)](https://github.com/uzairdeveloper223/hidamari/releases)
+[![GitHub release](https://img.shields.io/github/v/release/uzairdeveloper223/hidamari?style=for-the-badge)](https://github.com/uzairdeveloper223/hidamari/releases/latest)
 
 Download the latest `.deb` from [Releases](https://github.com/uzairdeveloper223/hidamari/releases) and install:
