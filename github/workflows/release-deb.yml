@@ -1,0 +1,43 @@
+name: Build and release .deb
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential debhelper meson ninja-build \
+            pkg-config libglib2.0-dev-bin gettext desktop-file-utils devscripts
+
+      - name: Build binary package
+        run: dpkg-buildpackage -us -uc -b
+
+      - name: Collect artifact
+        run: |
+          mkdir -p dist
+          mv ../hidamari_*.deb dist/
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hidamari-deb
+          path: dist/*.deb
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.deb
+          generate_release_notes: true

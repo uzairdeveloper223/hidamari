@@ -1,0 +1,11 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hidamari
+Source: https://github.com/jeffshee/hidamari
+
+Files: *
+Copyright: jeffshee
+License: GPL-3.0
+
+License: GPL-3.0
+ See /usr/share/common-licenses/GPL-3 or the COPYING file in this
+ package for the full license text.

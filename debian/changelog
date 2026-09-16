@@ -1,0 +1,5 @@
+hidamari (3.7-1) unstable; urgency=medium
+
+  * Initial native Debian packaging, built via upstream meson.build.
+
+ -- Uzair Mughal <contact@uzair.is-a.dev>  Wed, 16 Sep 2026 10:00:00 +0000

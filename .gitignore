@@ -4,6 +4,7 @@ __pycache__/
 # Build
 build/
 _build/
+obj-*/
 
 # Virtual environments
 /venv/
@@ -17,3 +18,22 @@ _build/
 .flatpak-builder/
 build-flatpak/
 *.flatpak
+
+# Debian packaging output (dpkg-buildpackage lands these in the parent dir)
+../*.deb
+../*.build
+../*.buildinfo
+../*.changes
+../*.dsc
+../*.tar.gz
+../*.tar.xz
+../*.upload
+
+# debhelper stamp/log files
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.debhelper.log
+debian/hidamari/
+debian/tmp/
